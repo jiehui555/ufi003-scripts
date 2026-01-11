@@ -3,7 +3,7 @@ import time
 import click
 import schedule
 
-from src.tasks import task_one, task_two
+from src.tasks import demo, topfeel
 
 
 @click.group()
@@ -13,13 +13,13 @@ def cli():
 
 @click.command()
 def run():
-    click.echo("Running...")
+    topfeel.auto_sign_in()
 
 
 @click.command()
 def cron():
-    schedule.every(5).seconds.do(task_one)
-    schedule.every().minute.do(task_two)
+    schedule.every(5).seconds.do(demo.task_one)
+    schedule.every().minute.do(demo.task_two)
 
     try:
         while True:
