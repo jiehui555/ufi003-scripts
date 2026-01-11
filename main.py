@@ -1,3 +1,6 @@
+# nuitka-project: --mode=onefile
+# nuitka-project: --output-dir=build
+
 import sys
 
 from src import app

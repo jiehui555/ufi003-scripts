@@ -4,7 +4,7 @@ import schedule
 
 
 def task_one():
-    logging.info("Executing Task One: This runs every 10 seconds.")
+    logging.info("Executing Task One: This runs every 5 seconds.")
 
 
 def task_two():
@@ -12,7 +12,7 @@ def task_two():
 
 
 def run() -> int:
-    schedule.every(10).seconds.do(task_one)
+    schedule.every(5).seconds.do(task_one)
     schedule.every().minute.do(task_two)
 
     try:
