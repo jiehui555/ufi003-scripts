@@ -11,4 +11,4 @@ COPY --from=builder /venv /venv
 ENV PATH="/venv/bin:$PATH"
 
 COPY . .
-CMD ["python", "main.py"]
+CMD ["python", "main.py", "cron"]
